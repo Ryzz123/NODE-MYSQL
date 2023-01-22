@@ -1,37 +1,37 @@
 # ================== [GET DATA MAHASISWA] ===========================
 
 # Melakukan get data mahasiswa
-GET http://localhost:8080/mahasiswa
+GET http://localhost:8080/api/v1/mahasiswa
 
 ###
 # Ambil data mahasiswa dan prodinya berdasarkan id mahasiswa
-GET http://localhost:8080/mahasiswa/data/2
+GET http://localhost:8080/api/v1/mahasiswa/data/5
 
 # ================== [ GET DATA PRODI] ===========================
 
 ###
 # Melakukan get data prodi
-GET http://localhost:8080/prodi
+GET http://localhost:8080/api/v1/prodi
 
 ###
 # Melakukan get semua data prodi dan mahasiswa berdasarkan prodi id
-GET http://localhost:8080/prodi/data/2
+GET http://localhost:8080/api/v1/prodi/data/1
 
 # ================== [RELASI TABEL] ===========================
 
 # Melakukan join antar tabel get data mahasiswa 
 ###
-GET http://localhost:8080/mahasiswa/prodi
+GET http://localhost:8080/api/v1/mahasiswa/prodi
 
 # Ambil semua data mahasiswa dan prodi berdasarkan id prodinya
 ###
-GET http://localhost:8080/mahasiswa/prodi/1
+GET http://localhost:8080/api/v1/mahasiswa/prodi/1
 
 # ================== [SAVE DATA MAHASISWA] ===========================
 
 ###
 # masukan data mahasiswa
-POST http://localhost:8080/mahasiswa
+POST http://localhost:8080/api/v1/mahasiswa
 Content-Type: application/json
 
 {
@@ -43,27 +43,27 @@ Content-Type: application/json
 
 ###
 # Masukan data prodi
-POST http://localhost:8080/prodi
+POST http://localhost:8080/api/v1/prodi
 Content-Type: application/json
 
 {
-    "prodi": "Agroteknologi",
-    "prodiId": "2"
+    "prodi": "Teknologi Informasi",
+    "prodiId": "1"
 }
 
 # ================== [UPDATE DATA MAHASISWA] ===========================
 # Update data mahasiswa berdasarkan id
 ###
-PATCH http://localhost:8080/mahasiswa/1
+PATCH http://localhost:8080/api/v1/mahasiswa/6
 Content-Type: application/json
 
 {
     "name": "Joko setiawan",
     "email": "jokoasik@gmail.com",
     "npm": "220810045",
-    "prodiId": 1
+    "prodiId": 2
 }
 
 # ================== [DELETED DATA MAHASISWA] ===========================
 ###
-DELETE  http://localhost:8080/mahasiswa/9
+DELETE  http://localhost:8080/api/v1/mahasiswa/9

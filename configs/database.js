@@ -1,12 +1,13 @@
 import { Sequelize } from "sequelize";
 
 const db = new Sequelize(
-    'study_db',
-    'root',
-    '',
+    'bmsdprxryuh30lfyshnp',
+    'uva1e5gdi7ii3qhw',
+    'dT0txAeCLSiKihHxuk9h',
     {
-        host: 'localhost',
-        dialect: "mysql"
+        host: 'bmsdprxryuh30lfyshnp-mysql.services.clever-cloud.com',
+        dialect: "mysql",
+        port: 3306
     }
 );
 
